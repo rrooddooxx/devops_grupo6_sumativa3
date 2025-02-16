@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  azureSubscription: 'github-sumativa3-cnx'
+  azureSubscription: 'g6-s3-service-cnx'
   location: 'eastus2'
   resourceGroupName: 'RG-Grupo06-Sumativa3'
   virtualNetworkName: 'VNet-G6-S3'
@@ -34,7 +34,7 @@ steps:
       set -e  # Termina el script si cualquier comando falla
 
       # Asegurar que se usa la suscripción correcta
-      #az account set --subscription "$(azureSubscription)"
+      az account set --subscription "$(azureSubscription)"
 
       # Checkear grupo de recursos
       if az group exists --name $(resourceGroupName); then
