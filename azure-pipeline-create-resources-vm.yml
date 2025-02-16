@@ -34,7 +34,7 @@ steps:
       set -e  # Termina el script si cualquier comando falla
 
       # Asegurar que se usa la suscripción correcta
-      az account set --subscription $(azureSubscription)
+      az account set --subscription "$(azureSubscription)"
 
       # Checkear grupo de recursos
       if az group exists --name $(resourceGroupName); then
