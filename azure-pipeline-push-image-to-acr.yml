@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main
+      - build
 
 variables:
   ACR_NAME: 'ACRSumativa3Grupo06' 
