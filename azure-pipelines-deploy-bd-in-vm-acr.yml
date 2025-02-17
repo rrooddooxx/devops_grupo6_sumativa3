@@ -5,7 +5,7 @@ trigger:
 
 variables:
   VM_IP_PUBLICA: '52.179.165.40'  
-  IMAGE_NAME: 'PgSql-Sumativa3-Grupo06'  
+  IMAGE_NAME: 'pgsql-sumativa3-grupo06'  
   ACR_NAME: 'ACRSumativa3Grupo06'  
   ACR_USERNAME: 'ACRSumativa3Grupo06' 
   ACR_PASSWORD: '2JmH5lwFGKFaiHeIvhQhmv15Ln0nh6FiLTYj1vyiOk+ACRAY88Wx'  
