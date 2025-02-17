@@ -64,7 +64,6 @@ stages:
                 - script: |
 
                     az login --identity
-
                     # Autenticarse en Azure Container Registry utilizando nombre de usuario y contraseña
                     echo "Autenticándose en Azure Container Registry y ejecutando la imagen Docker..."
                     az acr login --name ${ACR_NAME}
