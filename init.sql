@@ -1,10 +1,10 @@
 CREATE TABLE clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    telefono VARCHAR(20) NOT NULL,
-    ciudad VARCHAR(50) NOT NULL,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id serial PRIMARY KEY,
+    nombre text NOT NULL,
+    email text NOT NULL,
+    telefono text NOT NULL,
+    ciudad text NOT NULL,
+    fecha_creacion timestamp NOT NULL DEFAULT NOW()
 );
 
 INSERT INTO clientes (nombre, email, telefono, ciudad) VALUES 
