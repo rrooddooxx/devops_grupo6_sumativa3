@@ -62,12 +62,13 @@ stages:
                   failOnStderr: true
 
                 - script: |
-                  
+
+                    az login --identity
 
                     # Autenticarse en Azure Container Registry utilizando nombre de usuario y contraseña
                     echo "Autenticándose en Azure Container Registry y ejecutando la imagen Docker..."
-                    echo "${ACR_PASSWORD}" | docker login "${ACR_NAME}.azurecr.io" -u "${ACR_USERNAME}" --password-stdin
-                    az acr show --name ${ACR_NAME}
+                    az acr login --name ${ACR_NAME}
+                    # echo "${ACR_PASSWORD}" | docker login "${ACR_NAME}.azurecr.io" -u "${ACR_USERNAME}" --password-stdin
 
                     # Descargar la imagen desde ACR
                     sudo docker pull acrsumativa3grupo06.azurecr.io/acrsumativa3grupo06.azurecr.io/pgsql-sumativa3-grupo06:latest
