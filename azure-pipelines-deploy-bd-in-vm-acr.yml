@@ -8,7 +8,6 @@ variables:
   IMAGE_NAME: 'pgsql-sumativa3-grupo06'  
   ACR_NAME: 'acrsumativa3grupo06'  
   ACR_USERNAME: 'ACRSumativa3Grupo06' 
-  ACR_PASSWORD: '2JmH5lwFGKFaiHeIvhQhmv15Ln0nh6FiLTYj1vyiOk+ACRAY88Wx'  
 
 stages:
   - stage: Deploy
@@ -71,7 +70,7 @@ stages:
                     az acr show --name ${ACR_NAME}
 
                     # Descargar la imagen desde ACR
-                    sudo docker pull acrsumativa3grupo06.azurecr.io/pgsql-sumativa3-grupo06:latest
+                    sudo docker pull acrsumativa3grupo06.azurecr.io/acrsumativa3grupo06.azurecr.io/pgsql-sumativa3-grupo06:latest
 
                     # Verificar si el contenedor PostgreSQL ya está en ejecución
                     if sudo docker ps -a --format '{{.Names}}' | grep -Eq "^pgsql_container\$"; then
